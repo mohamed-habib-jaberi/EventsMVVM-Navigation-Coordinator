@@ -14,6 +14,9 @@
 		618C3951255C035B00BA5BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618C3950255C035B00BA5BD7 /* Assets.xcassets */; };
 		618C3954255C035B00BA5BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618C3952255C035B00BA5BD7 /* LaunchScreen.storyboard */; };
 		618C395C255C2FA900BA5BD7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C395B255C2FA900BA5BD7 /* AppCoordinator.swift */; };
+		618C395E255C369100BA5BD7 /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C395D255C369100BA5BD7 /* EventListCoordinator.swift */; };
+		618C3960255C37AC00BA5BD7 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C395F255C37AC00BA5BD7 /* EventListViewController.swift */; };
+		618C3962255C3E4C00BA5BD7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C3961255C3E4C00BA5BD7 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		618C3953255C035B00BA5BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618C3955255C035B00BA5BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618C395B255C2FA900BA5BD7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		618C395D255C369100BA5BD7 /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
+		618C395F255C37AC00BA5BD7 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		618C3961255C3E4C00BA5BD7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				618C3950255C035B00BA5BD7 /* Assets.xcassets */,
 				618C3952255C035B00BA5BD7 /* LaunchScreen.storyboard */,
 				618C3955255C035B00BA5BD7 /* Info.plist */,
+				618C395D255C369100BA5BD7 /* EventListCoordinator.swift */,
+				618C395F255C37AC00BA5BD7 /* EventListViewController.swift */,
+				618C3961255C3E4C00BA5BD7 /* UIColor+Extensions.swift */,
 			);
 			path = "EventsMVVM-Navigation+Coordinator";
 			sourceTree = "<group>";
@@ -142,9 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				618C395C255C2FA900BA5BD7 /* AppCoordinator.swift in Sources */,
+				618C3960255C37AC00BA5BD7 /* EventListViewController.swift in Sources */,
 				618C394C255C035800BA5BD7 /* ViewController.swift in Sources */,
 				618C3948255C035800BA5BD7 /* AppDelegate.swift in Sources */,
+				618C3962255C3E4C00BA5BD7 /* UIColor+Extensions.swift in Sources */,
 				618C394A255C035800BA5BD7 /* SceneDelegate.swift in Sources */,
+				618C395E255C369100BA5BD7 /* EventListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
