@@ -5,3 +5,7 @@
 
 # # Design
 <img width="753" alt="design" src="https://user-images.githubusercontent.com/36473665/98826496-0d9a9300-2436-11eb-8d87-e1dc1e81c5cf.png">
+
+## Tasks
+
+1.  We will look at how to structure our Event Countdown application using Coordinators starting with our AppCoordinator which will be created in our SceneDelegate and is responsible for setting up the app before creating an EventListCoordinator to handle our events list interactions
