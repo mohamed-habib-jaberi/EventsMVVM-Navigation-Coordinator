@@ -12,3 +12,4 @@
 1.  We will look at how to structure our Event Countdown application using Coordinators starting with our AppCoordinator which will be created in our SceneDelegate and is responsible for setting up the app before creating an EventListCoordinator to handle our events list interactions
 2.  Build an event countdown iOS app using MVVM we will setup our event model. Using core data we will be able to save and fetch events
 3.  Create our view models and handle the add event flow by creating an add event coordinator and also handling when the coordinator has finished this flow
+4.  We build out the add event screen. We create a cell view model to represent the cell and look at how we can use callbacks to replicate bindings.We also work out how we can display a datepicker when the user taps on the date textfield vs a normal textfield
