@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class EventListViewController: UIViewController {
-
+    
+    private let coreDataManager = CoreDataManager()
+    
     static func instantiate() -> EventListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let controller = storyboard.instantiateViewController(identifier: "EventListViewController") as! EventListViewController
@@ -19,22 +22,23 @@ class EventListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     setupViews()
         
+        setupViews()
+        coreDataManager.saveEvent(name: "New Years", date: Date(), image: #imageLiteral(resourceName: "chris-gilbert-NxZzwsH0PHg-unsplash"))
+        print(coreDataManager.fetchEvents())
     }
     private func setupViews(){
         let plusimage = UIImage(systemName: "plus.circle.fill")
-             let barButtonItem = UIBarButtonItem(image: plusimage, style: .plain, target: self, action: #selector(tappedRightBarButton))
-             barButtonItem.tintColor = .primary
-             navigationItem.rightBarButtonItem = barButtonItem
-             navigationItem.title = "Events"
-             navigationController?.navigationBar.prefersLargeTitles = true
+        let barButtonItem = UIBarButtonItem(image: plusimage, style: .plain, target: self, action: #selector(tappedRightBarButton))
+        barButtonItem.tintColor = .primary
+        navigationItem.rightBarButtonItem = barButtonItem
+        navigationItem.title = "Events"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-   @objc private func tappedRightBarButton()  {
+    @objc private func tappedRightBarButton()  {
         print("tapped right Bar Button")
-    
+        
     }
     
 }
