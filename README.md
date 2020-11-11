@@ -8,3 +8,4 @@
 
 ## Tasks
 
+1.  We will look at how to structure our Event Countdown application using Coordinators starting with our AppCoordinator which will be created in our SceneDelegate and is responsible for setting up the app before creating an EventListCoordinator to handle our events list interactions
