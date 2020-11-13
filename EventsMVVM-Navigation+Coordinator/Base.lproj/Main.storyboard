@@ -29,9 +29,24 @@
                     <view key="view" contentMode="scaleToFill" id="SZR-RM-NzD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="osa-K4-Nf9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yy8-5b-NY3" firstAttribute="trailing" secondItem="osa-K4-Nf9" secondAttribute="trailing" id="3Bj-aY-dh2"/>
+                            <constraint firstItem="osa-K4-Nf9" firstAttribute="leading" secondItem="Yy8-5b-NY3" secondAttribute="leading" id="GmI-qO-e5D"/>
+                            <constraint firstItem="Yy8-5b-NY3" firstAttribute="bottom" secondItem="osa-K4-Nf9" secondAttribute="bottom" id="YAz-f8-g8O"/>
+                            <constraint firstItem="osa-K4-Nf9" firstAttribute="top" secondItem="Yy8-5b-NY3" secondAttribute="top" id="scX-nW-zVa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yy8-5b-NY3"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="osa-K4-Nf9" id="FL4-mk-GXy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIY-f7-Zzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
