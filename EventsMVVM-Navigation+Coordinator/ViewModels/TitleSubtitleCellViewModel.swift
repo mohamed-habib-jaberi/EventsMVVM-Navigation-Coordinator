@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class TitleSubtitleCellViewModel {
     
@@ -27,6 +28,7 @@ final class TitleSubtitleCellViewModel {
         return dateFormatter
     }()
     
+    private(set) var image: UIImage?
     private(set) var onCellUpdate : () -> Void = {}
     
     init(title: String, subtitle: String, placeholder: String, type: CellType, onCellUpdate: @escaping () -> Void ) {
@@ -45,6 +47,11 @@ final class TitleSubtitleCellViewModel {
         let dateString = dateFormatter.string(from: date)
         self.subtitle = dateString
         // reload cell
+        onCellUpdate()
+    }
+    
+    func update(_ image: UIImage)  {
+        self.image = image
         onCellUpdate()
     }
 }
