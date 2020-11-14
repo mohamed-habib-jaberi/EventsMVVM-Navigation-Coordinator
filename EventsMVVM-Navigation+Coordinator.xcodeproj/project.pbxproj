@@ -26,6 +26,7 @@
 		618C3978255DE51300BA5BD7 /* TitleSubtitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C3977255DE51300BA5BD7 /* TitleSubtitleCellViewModel.swift */; };
 		618C397B255DE5A600BA5BD7 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C397A255DE5A600BA5BD7 /* TitleSubtitleCell.swift */; };
 		618C397D256012A100BA5BD7 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C397C256012A100BA5BD7 /* ImagePickerCoordinator.swift */; };
+		618C397F25604F7D00BA5BD7 /* EventCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C397E25604F7D00BA5BD7 /* EventCellBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		618C3977255DE51300BA5BD7 /* TitleSubtitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellViewModel.swift; sourceTree = "<group>"; };
 		618C397A255DE5A600BA5BD7 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 		618C397C256012A100BA5BD7 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		618C397E25604F7D00BA5BD7 /* EventCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				618C3950255C035B00BA5BD7 /* Assets.xcassets */,
 				618C3952255C035B00BA5BD7 /* LaunchScreen.storyboard */,
 				618C3955255C035B00BA5BD7 /* Info.plist */,
+				618C397E25604F7D00BA5BD7 /* EventCellBuilder.swift */,
 			);
 			path = "EventsMVVM-Navigation+Coordinator";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				618C396C255C652500BA5BD7 /* EventListViewModel.swift in Sources */,
 				618C394A255C035800BA5BD7 /* SceneDelegate.swift in Sources */,
 				618C397D256012A100BA5BD7 /* ImagePickerCoordinator.swift in Sources */,
+				618C397F25604F7D00BA5BD7 /* EventCellBuilder.swift in Sources */,
 				618C397B255DE5A600BA5BD7 /* TitleSubtitleCell.swift in Sources */,
 				618C396F255C723300BA5BD7 /* AddEventCoordinator.swift in Sources */,
 				618C395E255C369100BA5BD7 /* EventListCoordinator.swift in Sources */,
