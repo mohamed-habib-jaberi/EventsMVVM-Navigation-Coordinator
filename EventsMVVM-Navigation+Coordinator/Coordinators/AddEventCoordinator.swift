@@ -55,13 +55,16 @@ final class AddEventCoordinator: Coordinator {
         print("show image picker ")
         
         guard let modalNavigationController = modalNavigationController else { return  }
+        
         self.completion = completion
+        
               let imagePickerCoordinator = ImagePickerCoordinator(navigationController: modalNavigationController)
         imagePickerCoordinator.parentCoordinator = self
               childCoordinators.append(imagePickerCoordinator)
               imagePickerCoordinator.start()
     }
     
+    //tell view modal that we have done and it can update our view
     func didFinishPicking( _ image: UIImage) {
         print("did finish picking")
         completion(image)

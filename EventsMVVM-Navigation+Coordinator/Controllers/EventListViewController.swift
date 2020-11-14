@@ -13,15 +13,16 @@ class EventListViewController: UIViewController {
     
     var viewModel: EventListViewModel!
     
-    private let coreDataManager = CoreDataManager()
+   // private let coreDataManager = CoreDataManager()
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
-        coreDataManager.saveEvent(name: "New Years", date: Date(), image: #imageLiteral(resourceName: "chris-gilbert-NxZzwsH0PHg-unsplash"))
-        print(coreDataManager.fetchEvents())
+        // test to save data in core data
+//        coreDataManager.saveEvent(name: "New Years", date: Date(), image: #imageLiteral(resourceName: "chris-gilbert-NxZzwsH0PHg-unsplash"))
+//        print(coreDataManager.fetchEvents())
     }
     private func setupViews(){
         let plusimage = UIImage(systemName: "plus.circle.fill")

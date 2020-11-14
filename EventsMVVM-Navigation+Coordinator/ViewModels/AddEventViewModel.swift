@@ -26,7 +26,7 @@ final class AddEventViewModel {
     private var dateCellViewModel: TitleSubtitleCellViewModel?
     private var backgroundImageCellViewModel: TitleSubtitleCellViewModel?
     private var  cellBuilder: EventCellBuilder
-     private let coreDataManager: CoreDataManager
+    private let coreDataManager: CoreDataManager
     
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -61,17 +61,17 @@ final class AddEventViewModel {
     
     // Done button in toolbar
     func tappedDone()  {
-        //extract info from cell view models and save in core data
-        //tell coordinator to dismiss
-        print("tapped done")
+        //extract info from cell view models and
+        print("tapped done to save data ")
         
         guard let name = nameCellViewModel?.subtitle,
             let dateString = dateCellViewModel?.subtitle,
             let image = backgroundImageCellViewModel?.image,
             let date = dateFormatter.date(from: dateString)
             else { return  }
-        
+        //save in core data
         coreDataManager.saveEvent(name: name, date: date, image: image)
+        //tell coordinator to dismiss
         coordinator?.didFinishSaveEvent()
         
     }
@@ -105,9 +105,11 @@ private extension AddEventViewModel {
         
         nameCellViewModel = cellBuilder.makeTitleSubtitleCellViewModel(.text)
         dateCellViewModel = cellBuilder.makeTitleSubtitleCellViewModel(.date) { [weak self] in
+            // to reload cell when insert date
             self?.onUpdate()
         }
         backgroundImageCellViewModel = cellBuilder.makeTitleSubtitleCellViewModel(.image) { [weak self] in
+            // to reload cell when insert image
             self?.onUpdate()
         }
         

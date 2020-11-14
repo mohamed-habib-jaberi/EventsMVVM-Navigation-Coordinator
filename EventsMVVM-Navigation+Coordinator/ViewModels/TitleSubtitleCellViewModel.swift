@@ -52,6 +52,7 @@ final class TitleSubtitleCellViewModel {
     
     func update(_ image: UIImage)  {
         self.image = image
+        //callbach which trigger our table view reload
         onCellUpdate?()
     }
 }
