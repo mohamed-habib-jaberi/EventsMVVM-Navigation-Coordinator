@@ -14,4 +14,4 @@
 3.  Create our view models and handle the add event flow by creating an add event coordinator and also handling when the coordinator has finished this flow
 4.  We build out the add event screen. We create a cell view model to represent the cell and look at how we can use callbacks to replicate bindings.We also work out how We can display a datepicker when the user taps on the date textfield vs a normal textfield
 5.  we look at how we can allow the user to select an image using UIImagePickerController. Once we have the image we will run through how we can update our view models and cell to handle this as well as how this flows through the architecture,We then save an event using the information from the viewmodel through our core date manager and dismiss the add event view controller and tidy up the coordinator appropriately
-6.  test
+6.  We leverage the power of UIStackView to build our event cells and show some tricks around getting the spacing we need
