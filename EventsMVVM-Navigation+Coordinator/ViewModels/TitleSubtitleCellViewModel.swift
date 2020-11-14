@@ -46,5 +46,5 @@ final class TitleSubtitleCellViewModel {
         self.subtitle = dateString
         // reload cell
         onCellUpdate()
-}
+    }
 }

@@ -12,6 +12,7 @@ final class AddEventViewModel {
     
     let title = "Add"
     
+    //Add Closure to update tableView
     var onUpdate: () -> Void = {}
     
     enum Cell {

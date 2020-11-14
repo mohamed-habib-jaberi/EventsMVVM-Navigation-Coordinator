@@ -19,6 +19,7 @@ class AddEventViewController: UIViewController {
         
         setupViews()
         
+        //Update tableView
         viewModel.onUpdate = { [weak self] in
             self?.tableView.reloadData()
         }
