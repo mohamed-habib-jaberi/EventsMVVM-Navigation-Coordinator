@@ -86,7 +86,7 @@ final class TitleSubtitleCell: UITableViewCell {
             verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: constant),
             verticalStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: constant),
             verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -constant),
-            verticalStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: constant)
+            verticalStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -constant)
             
         ])
         
