@@ -11,6 +11,9 @@ import CoreData
 
 class EventListViewController: UIViewController {
     
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     var viewModel: EventListViewModel!
     
    // private let coreDataManager = CoreDataManager()
@@ -20,9 +23,11 @@ class EventListViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
-        // test to save data in core data
-//        coreDataManager.saveEvent(name: "New Years", date: Date(), image: #imageLiteral(resourceName: "chris-gilbert-NxZzwsH0PHg-unsplash"))
-//        print(coreDataManager.fetchEvents())
+        
+        viewModel.onUpdate = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        viewModel.viewDidLoad()
     }
     private func setupViews(){
         let plusimage = UIImage(systemName: "plus.circle.fill")
@@ -31,6 +36,9 @@ class EventListViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButtonItem
         navigationItem.title = viewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        tableView.dataSource = self
+        tableView.register(EventCell.self, forCellReuseIdentifier: "EventCell")
     }
     
     @objc private func tappedAddEventButton()  {
@@ -38,5 +46,21 @@ class EventListViewController: UIViewController {
         viewModel.tappedAddEvent()
         
     }
+}
+
+extension EventListViewController: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch viewModel.cell(at: indexPath) {
+        case .event (let eventCellViewModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
+            cell.update(with: eventCellViewModel)
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows()
+    }
 }
