@@ -30,6 +30,7 @@
 		618C39812561D11700BA5BD7 /* EventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C39802561D11700BA5BD7 /* EventCellViewModel.swift */; };
 		618C39832561D30C00BA5BD7 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C39822561D30C00BA5BD7 /* EventCell.swift */; };
 		61A9D9CA25699F7F005D5BEC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9D9C925699F7F005D5BEC /* UIView+Extensions.swift */; };
+		61A9D9CF256A974F005D5BEC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9D9CE256A974F005D5BEC /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		618C39802561D11700BA5BD7 /* EventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel.swift; sourceTree = "<group>"; };
 		618C39822561D30C00BA5BD7 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		61A9D9C925699F7F005D5BEC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		61A9D9CE256A974F005D5BEC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,17 +94,16 @@
 			children = (
 				618C3947255C035800BA5BD7 /* AppDelegate.swift */,
 				618C3949255C035800BA5BD7 /* SceneDelegate.swift */,
+				61A9D9CB256A951E005D5BEC /* Builder */,
 				618C3976255C8DA900BA5BD7 /* Core Data */,
 				618C3963255C50C600BA5BD7 /* Extensions */,
 				618C3979255DE55400BA5BD7 /* Views */,
 				618C396D255C66A500BA5BD7 /* ViewModels */,
 				618C3964255C50E000BA5BD7 /* Controllers */,
 				618C3965255C50F200BA5BD7 /* Coordinators */,
-				618C394D255C035800BA5BD7 /* Main.storyboard */,
-				618C3950255C035B00BA5BD7 /* Assets.xcassets */,
-				618C3952255C035B00BA5BD7 /* LaunchScreen.storyboard */,
+				61A9D9CC256A954C005D5BEC /* Stroryboard */,
+				61A9D9CD256A9571005D5BEC /* ressources */,
 				618C3955255C035B00BA5BD7 /* Info.plist */,
-				618C397E25604F7D00BA5BD7 /* EventCellBuilder.swift */,
 			);
 			path = "EventsMVVM-Navigation+Coordinator";
 			sourceTree = "<group>";
@@ -113,6 +114,7 @@
 				618C3961255C3E4C00BA5BD7 /* UIColor+Extensions.swift */,
 				618C3972255C7DC700BA5BD7 /* UIViewController+Extensions.swift */,
 				61A9D9C925699F7F005D5BEC /* UIView+Extensions.swift */,
+				61A9D9CE256A974F005D5BEC /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,6 +166,31 @@
 				618C39822561D30C00BA5BD7 /* EventCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		61A9D9CB256A951E005D5BEC /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				618C397E25604F7D00BA5BD7 /* EventCellBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		61A9D9CC256A954C005D5BEC /* Stroryboard */ = {
+			isa = PBXGroup;
+			children = (
+				618C394D255C035800BA5BD7 /* Main.storyboard */,
+				618C3952255C035B00BA5BD7 /* LaunchScreen.storyboard */,
+			);
+			path = Stroryboard;
+			sourceTree = "<group>";
+		};
+		61A9D9CD256A9571005D5BEC /* ressources */ = {
+			isa = PBXGroup;
+			children = (
+				618C3950255C035B00BA5BD7 /* Assets.xcassets */,
+			);
+			path = ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +266,7 @@
 			files = (
 				618C3978255DE51300BA5BD7 /* TitleSubtitleCellViewModel.swift in Sources */,
 				618C395C255C2FA900BA5BD7 /* AppCoordinator.swift in Sources */,
+				61A9D9CF256A974F005D5BEC /* Date+Extensions.swift in Sources */,
 				618C3971255C7C4E00BA5BD7 /* AddEventViewController.swift in Sources */,
 				618C3960255C37AC00BA5BD7 /* EventListViewController.swift in Sources */,
 				618C3975255C8BFA00BA5BD7 /* AddEventViewModel.swift in Sources */,

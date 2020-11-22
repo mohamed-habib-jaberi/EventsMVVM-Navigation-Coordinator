@@ -11,6 +11,8 @@ import UIKit
 
 final class CoreDataManager {
     
+    static let shared = CoreDataManager()
+    
   lazy var persistentContainer : NSPersistentContainer = {
         let persistentContainer = NSPersistentContainer(name: "EventsMVVM-Navigation+Coordinator")
         persistentContainer.loadPersistentStores { (_, error) in
