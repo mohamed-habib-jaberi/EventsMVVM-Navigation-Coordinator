@@ -6,8 +6,9 @@
 //  Copyright © 2020 mohamed  habib. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
+import CoreData
 
 struct EventCellViewModel {
     
@@ -15,6 +16,9 @@ struct EventCellViewModel {
     
     private static let imageCache = NSCache<NSString, UIImage >()
     private let imageQueue = DispatchQueue(label: "imageQueue", qos: .background)
+    
+    var onSelect: (NSManagedObjectID) -> Void = { _ in }
+    
     private var cacheKey: String {
         return event.objectID.description
     }
@@ -34,6 +38,11 @@ struct EventCellViewModel {
     var eventName: String? {
         event.name
     }
+    
+    private let event: Event
+     init(event: Event) {
+         self.event = event
+     }
     
     func loadImage(completion: @escaping(UIImage?) -> Void) {
         
@@ -56,15 +65,8 @@ struct EventCellViewModel {
         }
         
     }
-    
-    //    var backgroundImage: UIImage {
-    //        guard let imageData = event.image else { return UIImage() }
-    //        return UIImage(data: imageData) ?? UIImage()
-    //
-    //       }
-    //
-    private let event: Event
-    init(event: Event) {
-        self.event = event
+ 
+    func didSelect()  {
+        onSelect(event.objectID)
     }
 }

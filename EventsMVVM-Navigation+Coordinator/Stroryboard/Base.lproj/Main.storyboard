@@ -10,7 +10,7 @@
         <!--Event List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="EventListViewController" id="BYZ-38-t0r" customClass="EventListViewController" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="EventListViewController" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
         <!--Add Event View Controller-->
         <scene sceneID="Krd-SV-GtN">
             <objects>
-                <viewController storyboardIdentifier="AddEventViewController" id="FAE-fp-lwb" customClass="AddEventViewController" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEventViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FAE-fp-lwb" customClass="AddEventViewController" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZR-RM-NzD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIY-f7-Zzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="630" y="66"/>
+        </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="6G2-QD-ICv">
+            <objects>
+                <viewController storyboardIdentifier="EventDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ekH-4D-5ac" customClass="EventDetailViewController" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VsT-qh-i6d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nO3-6K-lEK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nO3-6K-lEK" firstAttribute="bottom" secondItem="VsT-qh-i6d" secondAttribute="bottom" id="W0n-oj-Sl9"/>
+                            <constraint firstItem="nO3-6K-lEK" firstAttribute="top" secondItem="VsT-qh-i6d" secondAttribute="top" id="lom-I3-XUZ"/>
+                            <constraint firstItem="nO3-6K-lEK" firstAttribute="trailing" secondItem="VsT-qh-i6d" secondAttribute="trailing" id="nHM-LA-v04"/>
+                            <constraint firstItem="nO3-6K-lEK" firstAttribute="leading" secondItem="VsT-qh-i6d" secondAttribute="leading" id="sK4-PP-ChR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RMh-eb-dct"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="nO3-6K-lEK" id="cpT-WN-dB2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyJ-ds-Vxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="60"/>
         </scene>
     </scenes>
 </document>
