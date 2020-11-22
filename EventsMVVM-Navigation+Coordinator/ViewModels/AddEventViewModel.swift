@@ -20,7 +20,7 @@ final class AddEventViewModel {
     }
     
     private(set) var cells: [AddEventViewModel.Cell] = []
-    var coordinator: AddEventCoordinator?
+    weak var coordinator: AddEventCoordinator?
     
     private var nameCellViewModel: TitleSubtitleCellViewModel?
     private var dateCellViewModel: TitleSubtitleCellViewModel?
@@ -46,10 +46,6 @@ final class AddEventViewModel {
     
     func viewDidDisapear()  {
         coordinator?.didFinish()
-    }
-    
-    deinit {
-        print("deinit from Add Event View Model ")
     }
     
     func numberOfRows() -> Int  {
@@ -81,7 +77,6 @@ final class AddEventViewModel {
         switch cells[indexpath.row] {
         case .titleSubtitle(let titleSubtitleCellViewModel):
             titleSubtitleCellViewModel.update(subtitle)
-            
         }
     }
     
@@ -95,6 +90,9 @@ final class AddEventViewModel {
                 titleSubtitleCellViewModel.update(image)
             }
         }
+    }
+    deinit {
+        print("deinit from Add Event View Model ")
     }
 }
 
