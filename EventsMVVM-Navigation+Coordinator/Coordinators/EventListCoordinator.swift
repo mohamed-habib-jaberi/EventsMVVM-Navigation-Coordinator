@@ -42,6 +42,7 @@ final class EventListCoordinator: Coordinator {
         //trigger event detai coordinator
         print(id)
         let eventDetailCoordinator = EventDetailCoordinator(eventID: id, navigationController: navigationController)
+        eventDetailCoordinator.parentCoordinator = self
         childCoordinators.append(eventDetailCoordinator)
         eventDetailCoordinator.start()
     }

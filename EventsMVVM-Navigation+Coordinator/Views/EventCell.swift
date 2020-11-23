@@ -10,12 +10,7 @@ import UIKit
 
 final class EventCell: UITableViewCell {
     
-    //    private var yearLabel = UILabel()
-    //    private var monthLabel = UILabel()
-    //    private var weekLabel = UILabel()
-    //    private var daysLabel = UILabel()
-    
-    private let timeRemainingLabes = [UILabel(), UILabel(), UILabel(), UILabel()]
+     private let timeRemainingStackView = TimeRemainingStackView()
     
     private var dateLabel = UILabel()
     
@@ -37,14 +32,13 @@ final class EventCell: UITableViewCell {
     }
     
     private func setupViews() {
-        (timeRemainingLabes + [dateLabel, eventNameLabel, backgroundImageView, verticalStackView]).forEach {
+        
+        timeRemainingStackView.setup()
+        
+        [dateLabel, eventNameLabel, backgroundImageView, verticalStackView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        timeRemainingLabes.forEach {
-            $0.font = .systemFont(ofSize: 28, weight: .medium)
-            $0.textColor = .white
-        }
         dateLabel.font = .systemFont(ofSize: 22, weight: .medium)
         dateLabel.textColor = .white
         eventNameLabel.font = .systemFont(ofSize: 34, weight: .bold)
@@ -60,10 +54,8 @@ final class EventCell: UITableViewCell {
         contentView.addSubview(verticalStackView)
         contentView.addSubview(eventNameLabel)
         
-        timeRemainingLabes.forEach {
-            verticalStackView.addArrangedSubview($0)
-        }
-        
+        verticalStackView.addArrangedSubview(timeRemainingStackView)
+     
         verticalStackView.addArrangedSubview(UIView())
         verticalStackView.addArrangedSubview(dateLabel)
     }
@@ -83,12 +75,8 @@ final class EventCell: UITableViewCell {
     
     func update(with viewModel: EventCellViewModel)  {
         
-        timeRemainingLabes.forEach {
-            $0.text = ""
-        }
-        
-        viewModel.timeRemainingStrings.enumerated().forEach {
-            timeRemainingLabes[$0.offset].text = $0.element
+        if let timeRemainingViewModel = viewModel.timeRemainingViewModel {
+             timeRemainingStackView.update(with: timeRemainingViewModel)
         }
         
         dateLabel.text = viewModel.dateText

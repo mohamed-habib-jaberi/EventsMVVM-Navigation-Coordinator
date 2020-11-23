@@ -78,18 +78,29 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nO3-6K-lEK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="110" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-Q5-Tv1" customClass="TimeRemainingStackView" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target">
+                                <rect key="frame" x="152" y="348" width="110" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="110" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="68x-Bd-oyH" customClass="TimeRemainingStackView" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="2Mp-Q5-Tv1" firstAttribute="centerX" secondItem="VsT-qh-i6d" secondAttribute="centerX" id="E2i-QQ-ytM"/>
                             <constraint firstItem="nO3-6K-lEK" firstAttribute="bottom" secondItem="VsT-qh-i6d" secondAttribute="bottom" id="W0n-oj-Sl9"/>
                             <constraint firstItem="nO3-6K-lEK" firstAttribute="top" secondItem="VsT-qh-i6d" secondAttribute="top" id="lom-I3-XUZ"/>
                             <constraint firstItem="nO3-6K-lEK" firstAttribute="trailing" secondItem="VsT-qh-i6d" secondAttribute="trailing" id="nHM-LA-v04"/>
+                            <constraint firstItem="2Mp-Q5-Tv1" firstAttribute="centerY" secondItem="VsT-qh-i6d" secondAttribute="centerY" id="p0h-wv-x3k"/>
                             <constraint firstItem="nO3-6K-lEK" firstAttribute="leading" secondItem="VsT-qh-i6d" secondAttribute="leading" id="sK4-PP-ChR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RMh-eb-dct"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="nO3-6K-lEK" id="cpT-WN-dB2"/>
+                        <outlet property="timeRemainingStackView" destination="68x-Bd-oyH" id="HR3-F5-pki"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyJ-ds-Vxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
