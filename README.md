@@ -18,3 +18,5 @@
 7.  DateComponentsFormatter and Image Caching: we use DateComponentsFormatter to display the time remaining until the event and adjust the contents of the vertical stack view to display this. We then use a cache and a background queue to improve performance
 8. we fix a few sneaky bugs from previous parts and then start building out our EventDetailCoordinator. The first step is to add the tableview delegate function to detect when someone taps on an event and then we handle this in the view model which tells our coordintor to trigger our EventDetailCoordinator flow
 9. We build a reusable component for displaying our time remaining parts driven by its own view model and we then make sure the detail coordinator and detail view model are then correctly tidied up by calling childDidFinish
+10. we discuss different approaches to the editing event flow and decide on a separate implementation to adding an event,
+Once the edit flow is completed we handle how we can update the previous screens to reflect this information
