@@ -9,9 +9,7 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
-    // test
-       // test
+  
     var window: UIWindow?
     var appCoordinator: AppCoordinator?
     
