@@ -31,8 +31,9 @@ final class EventListViewModel {
     }
     
     func reload()  {
-        let event = coreDataManager.fetchEvents()
+        EventCellViewModel.imageCache.removeAllObjects()
         
+        let event = coreDataManager.fetchEvents()
         cells = event.map {
             var eventCellViewModel = EventCellViewModel(event: $0)
             if let coordinator = coordinator {

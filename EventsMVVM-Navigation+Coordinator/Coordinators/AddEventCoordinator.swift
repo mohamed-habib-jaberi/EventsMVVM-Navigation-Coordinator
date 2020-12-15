@@ -47,8 +47,9 @@ final class AddEventCoordinator: Coordinator {
     }
     
     func didFinishSaveEvent()  {
-        parentCoordinator?.onSaveEvent()
+        parentCoordinator?.onUpdateEvent()
         navigationController.dismiss(animated: true, completion: nil)
+        
     }
     
     func showImagePicker( completion: @escaping (UIImage) -> Void) {
@@ -60,17 +61,21 @@ final class AddEventCoordinator: Coordinator {
         self.completion = completion
         
               let imagePickerCoordinator = ImagePickerCoordinator(navigationController: modalNavigationController)
+        imagePickerCoordinator.onFinishPicking = { image in
+            self.completion(image)
+            self.modalNavigationController?.dismiss(animated: true, completion: nil)
+        }
         imagePickerCoordinator.parentCoordinator = self
               childCoordinators.append(imagePickerCoordinator)
               imagePickerCoordinator.start()
     }
     
     //tell view modal that we have done and it can update our view
-    func didFinishPicking( _ image: UIImage) {
-        print("did finish picking")
-        completion(image)
-        modalNavigationController?.dismiss(animated: true, completion: nil)
-    }
+//    func didFinishPicking( _ image: UIImage) {
+//        print("did finish picking")
+//        completion(image)
+//        modalNavigationController?.dismiss(animated: true, completion: nil)
+//    }
   
     
     func childDidFinish(_ childCoordinator: Coordinator)  {

@@ -107,5 +107,35 @@
             </objects>
             <point key="canvasLocation" x="1441" y="60"/>
         </scene>
+        <!--Edit Event View Controller-->
+        <scene sceneID="N5a-dX-tcv">
+            <objects>
+                <viewController storyboardIdentifier="EditEventViewController" id="tqe-Ri-8EU" customClass="EditEventViewController" customModule="EventsMVVM_Navigation_Coordinator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rPV-3V-bkh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AnE-ku-nza">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ddw-QP-5EP" firstAttribute="bottom" secondItem="AnE-ku-nza" secondAttribute="bottom" id="2eL-7e-JgN"/>
+                            <constraint firstItem="AnE-ku-nza" firstAttribute="leading" secondItem="Ddw-QP-5EP" secondAttribute="leading" id="Fos-QB-SFS"/>
+                            <constraint firstItem="AnE-ku-nza" firstAttribute="top" secondItem="Ddw-QP-5EP" secondAttribute="top" id="aTe-dO-Hyq"/>
+                            <constraint firstItem="Ddw-QP-5EP" firstAttribute="trailing" secondItem="AnE-ku-nza" secondAttribute="trailing" id="eAl-SZ-Luj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ddw-QP-5EP"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="AnE-ku-nza" id="d5d-ry-9QK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUB-bI-nKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2214" y="60"/>
+        </scene>
     </scenes>
 </document>
