@@ -20,3 +20,4 @@
 9. We build a reusable component for displaying our time remaining parts driven by its own view model and we then make sure the detail coordinator and detail view model are then correctly tidied up by calling childDidFinish
 10. we discuss different approaches to the editing event flow and decide on a separate implementation to adding an event,
 Once the edit flow is completed we handle how we can update the previous screens to reflect this information
+11 - the final part, of building an event countdown MVVM iOS app we refactor the CoreDataManager through the use of Generics so it can handle any entity and we create an EventService to inject into our view models via an EventServiceProtocol which keeps our app testable.
