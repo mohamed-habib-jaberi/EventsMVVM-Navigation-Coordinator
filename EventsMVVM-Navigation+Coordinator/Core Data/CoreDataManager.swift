@@ -44,17 +44,6 @@ final class CoreDataManager {
         }
     }
     
-//    func fetchEvents() -> [Event] {
-//        do {
-//           let fetchRequest = NSFetchRequest<Event>(entityName: "Event")
-//            let events = try moc.fetch(fetchRequest)
-//            return events
-//        } catch  {
-//            print(error)
-//            return []
-//        }
-//    }
-    
     func get<T: NSManagedObject>(_ id: NSManagedObjectID) -> T? {
         do {
             return try moc.existingObject(with: id) as? T
@@ -63,14 +52,4 @@ final class CoreDataManager {
         }
         return nil
     }
-    
-//    func getEvent(_ id: NSManagedObjectID) -> Event?  {
-//
-//        do {
-//            return try moc.existingObject(with: id) as? Event
-//        } catch  {
-//            print(error)
-//        }
-//        return nil
-//    }
 }

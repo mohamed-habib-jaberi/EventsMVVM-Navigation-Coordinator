@@ -53,7 +53,7 @@ final class EventDetailCoordinator: Coordinator {
             event: event,
             navigationController: navigationController
         )
-        editEventCoordinator.parentCoordinator = self
+        editEventCoordinator.parentCoordinator = self as! (Coordinator & EventUpdatingCoordinator)
         childCoordinators.append(editEventCoordinator)
         editEventCoordinator.start()
     }

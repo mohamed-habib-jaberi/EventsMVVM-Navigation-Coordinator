@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EventUpdatingCoordinator {
+    func onUpdateEvent()
+}
+
 final class EditEventCoordinator: Coordinator {
     
     private(set) var childCoordinators: [Coordinator] = []
@@ -17,7 +21,7 @@ final class EditEventCoordinator: Coordinator {
     
     private var completion: (UIImage) -> Void = {_ in }
     
-    var parentCoordinator: EventDetailCoordinator?
+    var parentCoordinator: (EventUpdatingCoordinator & Coordinator)?
     
     init(event: Event,
          navigationController: UINavigationController
