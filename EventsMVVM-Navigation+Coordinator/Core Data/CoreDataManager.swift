@@ -25,22 +25,7 @@ final class CoreDataManager {
     var moc : NSManagedObjectContext {
         persistentContainer.viewContext
     }
-    func updateEvent(event: Event, name: String, date: Date, image: UIImage)  {
-        event.setValue(name, forKey: "name")
-        
-        let resizeImage = image.someAspectRatio(newHeight: 250)
-        
-        let imageData = resizeImage.jpegData(compressionQuality: 0.5)
-        event.setValue(imageData, forKey: "image")
-        event.setValue(date, forKey: "date")
-        
-        do {
-            try moc.save()
-        } catch {
-            print(error)
-        }
-    }
-    
+
     func save()  {
         do {
             try moc.save()
@@ -48,22 +33,6 @@ final class CoreDataManager {
             print(error)
         }
     }
-//    func saveEvent(name: String, date: Date, image: UIImage)  {
-//        let event = Event(context: moc)
-//        event.setValue(name, forKey: "name")
-//
-//        let resizeImage = image.someAspectRatio(newHeight: 250)
-//
-//        let imageData = resizeImage.jpegData(compressionQuality: 0.5)
-//        event.setValue(imageData, forKey: "image")
-//        event.setValue(date, forKey: "date")
-//
-//        do {
-//            try moc.save()
-//        } catch {
-//            print(error)
-//        }
-//    }
     
     func getAll<T: NSManagedObject>() -> [T]  {
         do {
